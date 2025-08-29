@@ -87,4 +87,63 @@ https://go.dev/play/
 - One source file at a time
 	- All logic needs to be in one file
 
- 
+## Course Tracker
+
+[x] - Introduction 
+[ ] - 1. Getting Started 
+[ ] - 2. Manage Simple Variable Values
+[ ] - 3. Manage Complex Types and Collections
+[ ] - 4. Manage Program Flow
+[ ] - 5. Create Reusable Code
+[ ] - 6. Work With Files and the Web
+
+## Code Notes
+
+### Basics
+
+#### Hello world
+
+```
+package main
+
+import "fmt"
+
+func main() {
+	fmt.Println("Hello, world!")
+}
+``` 
+
+- The package name must be declared
+- Go will look for the main function and run it
+
+#### Initializing a module
+
+`go mod init MODULENAME`
+
+MODULENAME can be as simple as main i.e. the package name, or use a unique identifier.
+MODULENAME as a unique identifier is usually done by reversing the the domain.
+
+`com.example/hello`
+
+This often the github URL and package location.
+
+The output file will be called `go.mod` and have the name of the module and the current version of go you are using, which will be the minimum version of go which the module requires.
+
+#### Debugging
+
+There seems to be a package called GBD and another called Delve. The recommendation appears to be to use Delve.
+
+`brew install delve`
+
+Here is the 'getting started' documentation on GH (https://github.com/go-delve/delve/blob/master/Documentation/cli/getting_started.md)
+
+##### Basic delve usage
+
+Load the package to be debugged
+`dlv debug MODULENAME`
+
+Set a breakpoint - package.function
+`break main.main`
+
+Continue to the breakpoint
+`continue`
