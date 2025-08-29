@@ -89,13 +89,13 @@ https://go.dev/play/
 
 ## Course Tracker
 
-[x] - Introduction 
-[ ] - 1. Getting Started 
-[ ] - 2. Manage Simple Variable Values
-[ ] - 3. Manage Complex Types and Collections
-[ ] - 4. Manage Program Flow
-[ ] - 5. Create Reusable Code
-[ ] - 6. Work With Files and the Web
+[x] - Introduction  
+[ ] - 1. Getting Started  
+[ ] - 2. Manage Simple Variable Values  
+[ ] - 3. Manage Complex Types and Collections  
+[ ] - 4. Manage Program Flow  
+[ ] - 5. Create Reusable Code  
+[ ] - 6. Work With Files and the Web  
 
 ## Code Notes
 
