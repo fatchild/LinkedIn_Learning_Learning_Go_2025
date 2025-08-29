@@ -147,3 +147,33 @@ Set a breakpoint - package.function
 
 Continue to the breakpoint
 `continue`
+
+Example
+
+```Bash
+edwardoakley@KT90334Q3N 01_05b % dlv debug com.example/hello
+Type 'help' for list of commands.
+(dlv) break main.test
+Breakpoint 1 set at 0x102c7b26c for main.test() ./hello.go:10
+(dlv) continue
+Hello, world!
+> [Breakpoint 1] main.test() ./hello.go:10 (hits goroutine(1):1 total:1) (PC: 0x102c7b26c)
+     5:	func main() {
+     6:	        fmt.Println("Hello, world!")
+     7:		test()
+     8:	}
+     9:
+=>  10:	func test() {
+    11:		fmt.Println("testing another function")
+    12:	}
+(dlv) continue
+testing another function
+Process 91776 has exited with status 0
+(dlv) exit
+```
+
+#### Build the package into an executable
+
+`go build hello hello.go`
+
+
